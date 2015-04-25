@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{189446A2-E2C2-41B9-A6B2-5F3CE69D4631}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpatialDataManagement</RootNamespace>
+    <AssemblyName>MapControlApplication1</AssemblyName>
+    <ApplicationIcon>Earth.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF.Local">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EditorExt, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseDistributedUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.GeoSurvey, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalysis, Version=10.0.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Server, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SOESupport, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Version">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.AxControls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Controls">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AttributesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttributesForm.Designer.cs">
+      <DependentUpon>AttributesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClearCurrentTool.cs" />
+    <Compile Include="ClearFeatureSelection.cs" />
+    <Compile Include="ClearReferenceScaleCmd.cs" />
+    <Compile Include="ControlsSynchronizer\ControlsSynchronizer.cs" />
+    <Compile Include="ControlsSynchronizer\GetApplicationPath.cs" />
+    <Compile Include="ControlsSynchronizer\Maps.cs" />
+    <Compile Include="ControlsSynchronizer\OpenNewMapDocument.cs" />
+    <Compile Include="CreateNewDocument.cs" />
+    <Compile Include="GetSymbol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GetSymbol.Designer.cs">
+      <DependentUpon>GetSymbol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayerAttributes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LayerAttributes.Designer.cs">
+      <DependentUpon>LayerAttributes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LayerPropertiesCmd.cs" />
+    <Compile Include="LayerSelectable.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OpenAttributeTableCmd.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Refresh.cs" />
+    <Compile Include="RemoveLayerCmd.cs" />
+    <Compile Include="ScaleThreSholds.cs" />
+    <Compile Include="SelectByShapeTool.cs" />
+    <Compile Include="SetReferenceScaleCmd.cs" />
+    <Compile Include="TurnAllLayersOffCmd.cs" />
+    <Compile Include="TurnAllLayersOnCmd.cs" />
+    <Compile Include="ZoomIn3X.cs" />
+    <Compile Include="ZoomToLayerCmd.cs" />
+    <Compile Include="ZoomToReferenceScaleCmd.cs" />
+    <Compile Include="空间数据管理\Alter SpatialReference.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\Alter SpatialReference.Designer.cs">
+      <DependentUpon>Alter SpatialReference.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\ConnectGBDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\ConnectGBDForm.Designer.cs">
+      <DependentUpon>ConnectGBDForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\Create Table.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\Create Table.Designer.cs">
+      <DependentUpon>Create Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\CreateFeature.cs" />
+    <Compile Include="空间数据管理\CreateFeatureClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\CreateFeatureClassForm.Designer.cs">
+      <DependentUpon>CreateFeatureClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\CreateFeatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\CreateFeatureForm.Designer.cs">
+      <DependentUpon>CreateFeatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\ObjectClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\ObjectClassForm.Designer.cs">
+      <DependentUpon>ObjectClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\DeleteFeature.cs" />
+    <Compile Include="空间数据管理\GDB2GDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\GDB2GDB.designer.cs">
+      <DependentUpon>GDB2GDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\GDB2GDBCmd.cs" />
+    <Compile Include="空间数据管理\NetworkDatasetfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\NetworkDatasetfrom.Designer.cs">
+      <DependentUpon>NetworkDatasetfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\RelationshipClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\RelationshipClassForm.Designer.cs">
+      <DependentUpon>RelationshipClassForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\Set Data Source.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\Set Data Source.Designer.cs">
+      <DependentUpon>Set Data Source.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\UpdateFeature.cs" />
+    <Compile Include="空间数据管理\UpdateFeatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\UpdateFeatureForm.Designer.cs">
+      <DependentUpon>UpdateFeatureForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\UpdateFeatures.cs" />
+    <Compile Include="空间数据管理\UpdateFeaturesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\UpdateFeaturesForm.Designer.cs">
+      <DependentUpon>UpdateFeaturesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="空间数据管理\数据转换.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="空间数据管理\数据转换.Designer.cs">
+      <DependentUpon>数据转换.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GetSymbol.resx">
+      <DependentUpon>GetSymbol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LayerAttributes.resx">
+      <DependentUpon>LayerAttributes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="空间数据管理\Alter SpatialReference.resx">
+      <DependentUpon>Alter SpatialReference.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\ConnectGBDForm.resx">
+      <DependentUpon>ConnectGBDForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\Create Table.resx">
+      <DependentUpon>Create Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\CreateFeatureClassForm.resx">
+      <DependentUpon>CreateFeatureClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\CreateFeatureForm.resx">
+      <DependentUpon>CreateFeatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\ObjectClassForm.resx">
+      <DependentUpon>ObjectClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\GDB2GDB.resx">
+      <DependentUpon>GDB2GDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\NetworkDatasetfrom.resx">
+      <DependentUpon>NetworkDatasetfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\RelationshipClassForm.resx">
+      <DependentUpon>RelationshipClassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\Set Data Source.resx">
+      <DependentUpon>Set Data Source.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\UpdateFeatureForm.resx">
+      <DependentUpon>UpdateFeatureForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\UpdateFeaturesForm.resx">
+      <DependentUpon>UpdateFeaturesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="空间数据管理\数据转换.resx">
+      <DependentUpon>数据转换.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlsSynchronizer\OpenNewMapDocument.bmp" />
+    <Content Include="ControlsSynchronizer\open_16.png" />
+    <Content Include="空间数据管理\GDB2GDBCmd.bmp" />
+    <EmbeddedResource Include="空间数据管理\UpdateFeature.cur" />
+    <EmbeddedResource Include="空间数据管理\UpdateFeature.bmp" />
+    <EmbeddedResource Include="空间数据管理\UpdateFeatures.bmp" />
+    <EmbeddedResource Include="空间数据管理\DeleteFeature.cur" />
+    <EmbeddedResource Include="空间数据管理\DeleteFeature.bmp" />
+    <EmbeddedResource Include="空间数据管理\CreateFeature.cur" />
+    <EmbeddedResource Include="空间数据管理\CreateFeature.bmp" />
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="Refresh.bmp" />
+    <EmbeddedResource Include="ZoomIn3X.bmp" />
+    <EmbeddedResource Include="SelectByShapeTool.cur" />
+    <EmbeddedResource Include="SelectByShapeTool.bmp" />
+    <EmbeddedResource Include="ZoomToReferenceScaleCmd.bmp" />
+    <EmbeddedResource Include="ClearReferenceScaleCmd.bmp" />
+    <EmbeddedResource Include="CreateNewDocument.bmp" />
+    <EmbeddedResource Include="ClearFeatureSelection.bmp" />
+    <EmbeddedResource Include="ClearCurrentTool.bmp" />
+    <Content Include="Earth.ico" />
+    <EmbeddedResource Include="SetReferenceScaleCmd.bmp" />
+    <EmbeddedResource Include="TurnAllLayersOffCmd.bmp" />
+    <EmbeddedResource Include="TurnAllLayersOnCmd.bmp" />
+    <EmbeddedResource Include="LayerPropertiesCmd.bmp" />
+    <EmbeddedResource Include="ZoomToLayerCmd.bmp" />
+    <EmbeddedResource Include="RemoveLayerCmd.bmp" />
+    <EmbeddedResource Include="OpenAttributeTableCmd.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
